@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>ActionLoop Pro Guest Pass</title>
+    <meta property="og:title" content="ActionLoop Pro Guest Pass">
+    <meta property="og:description" content="1 month of ActionLoop Pro, free.">
+    <meta property="og:image" content="https://actionloop.github.io/actionloop-support/pass/icon.png">
+    <meta property="og:type" content="website">
+    <style>
+        :root { color-scheme: dark; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: #f5f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        main {
+            width: 100%;
+            max-width: 420px;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .icon {
+            width: 84px;
+            height: 84px;
+            border-radius: 19px;
+            display: block;
+            margin: 0 auto 28px;
+        }
+        .label {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #0a84ff;
+            margin: 0 0 8px;
+        }
+        h1 {
+            font-size: 32px;
+            line-height: 1.15;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0 0 14px;
+            text-wrap: balance;
+        }
+        .lead {
+            font-size: 17px;
+            color: #a1a1a6;
+            margin: 0 0 32px;
+            text-wrap: pretty;
+        }
+        .button {
+            display: block;
+            padding: 15px 20px;
+            border-radius: 14px;
+            background: #0a84ff;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .button:active { opacity: 0.8; }
+        .elsewhere {
+            display: none;
+            padding: 16px 18px;
+            border-radius: 14px;
+            background: #1c1c1e;
+            font-size: 16px;
+            color: #f5f5f7;
+        }
+        .elsewhere span { display: block; color: #a1a1a6; font-size: 15px; margin-top: 4px; }
+        .not-ios .button { display: none; }
+        .not-ios .elsewhere { display: block; }
+        .terms {
+            margin: 36px 0 0;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #8e8e93;
+            text-align: left;
+        }
+        .terms a { color: inherit; }
+    </style>
+</head>
+<body>
+<main>
+    <img class="icon" src="icon.png" alt="ActionLoop">
+    <p class="label">Guest Pass</p>
+    <h1>1 month of ActionLoop Pro, free</h1>
+    <p class="lead">A friend gave you a Guest Pass. Pro adds 4K and 60 fps on devices that record them, side-by-side comparison, and clips without the end card.</p>
+
+    <!-- The one place the code lives. To change it, edit this link. -->
+    <a class="button" id="redeem" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6758930761&amp;code=ACTIONLOOPGUEST">Redeem in the App Store</a>
+    <p class="elsewhere">ActionLoop is on iPhone and iPad only for now.<span>Open this page on your iPhone or iPad to use the pass.</span></p>
+
+    <p class="terms">
+        The pass starts the annual plan of ActionLoop Pro with 1 month free. After that it renews each year at the price the App Store shows when you redeem, until you cancel. Cancel anytime in your Apple Account settings, at least a day before the free month ends to avoid being charged. For people who have never subscribed to ActionLoop Pro, one per Apple Account, while supplies last. Redeemable in every country and region where ActionLoop is on the App Store. Apple Account required, subject to prior acceptance of license and usage terms. Codes are not for resale and have no cash value. Full terms apply; see <a href="https://www.apple.com/legal/internet-services/itunes/ww">apple.com/legal/internet-services/itunes/ww</a>. Offer and content are provided by ActionLoop.
+    </p>
+</main>
+<script>
+    // Apple's redemption screen exists on iPhone and iPad. iPadOS says it is a Mac, with touch.
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (!isIOS) { document.body.className = "not-ios"; }
+</script>
+</body>
+</html>
